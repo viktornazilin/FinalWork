@@ -1,0 +1,189 @@
+Last login: Sat Apr  8 09:04:06 on ttys000
+viktornazilin@Air-Viktor ИТМО % cd
+viktornazilin@Air-Viktor ~ % ssh root@151.248.122.117
+ssh: connect to host 151.248.122.117 port 22: Connection refused
+viktornazilin@Air-Viktor ~ % ssh root@151.248.122.117
+ssh: connect to host 151.248.122.117 port 22: Connection refused
+viktornazilin@Air-Viktor ~ % ssh root@151.248.122.117
+ssh: connect to host 151.248.122.117 port 22: Connection refused
+viktornazilin@Air-Viktor ~ % ssh root@151.248.122.117
+root@151.248.122.117's password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-146-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+Last login: Sat Apr  8 10:10:13 2023 from 176.199.211.242
+root@151-248-122-117:~# cat > "Домашние животные.txt"
+Кошка
+Собака
+Кролик^C
+root@151-248-122-117:~# cat > "Вьючные животные.txt"
+Лошадь
+Корова
+Мул^C
+root@151-248-122-117:~# cat > "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+> cat > "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt^C
+root@151-248-122-117:~# cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+> ^C
+root@151-248-122-117:~# cat > "Животные.txt"
+^Z
+[1]+  Stopped                 cat > "Животные.txt"
+root@151-248-122-117:~# cat "Животные.txt"
+root@151-248-122-117:~# cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+> 
+> ^C
+root@151-248-122-117:~# cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+> ^C
+root@151-248-122-117:~# cat "Домашние животные.txt" "Вьючные животные.txt" > "Друзья человека.txt"
+root@151-248-122-117:~# cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt"
+root@151-248-122-117:~# mv "Животные.txt" "Друзья человека.txt"
+root@151-248-122-117:~# cat "Друзья человека.txt"
+Кошка
+Собака
+Лошадь
+Корова
+root@151-248-122-117:~# mkdir > "Питомниик"
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+root@151-248-122-117:~# mkdir "Питомник"
+root@151-248-122-117:~# mv "Животные.txt" /Питомник
+mv: cannot stat 'Животные.txt': No such file or directory
+root@151-248-122-117:~# mv "Друзья человека.txt" /Питомник
+root@151-248-122-117:~# wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+--2023-04-15 09:55:32--  https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+Resolving dev.mysql.com (dev.mysql.com)... 2a02:2d8:3:9a9::2e31, 2a02:2d8:3:9a5::2e31, 184.85.150.139
+Connecting to dev.mysql.com (dev.mysql.com)|2a02:2d8:3:9a9::2e31|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb [following]
+--2023-04-15 09:55:33--  https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb
+Resolving repo.mysql.com (repo.mysql.com)... 184.50.200.228
+Connecting to repo.mysql.com (repo.mysql.com)|184.50.200.228|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18048 (18K) [application/x-debian-package]
+Saving to: ‘mysql-apt-config_0.8.24-1_all.deb’
+
+mysql-apt-config_0.8.24-1_a 100%[==========================================>]  17.62K  --.-KB/s    in 0s      
+
+2023-04-15 09:55:33 (40.2 MB/s) - ‘mysql-apt-config_0.8.24-1_all.deb’ saved [18048/18048]
+
+root@151-248-122-117:~# sudo dpkg - i mysql-apt-config_0.8.24-1_all.deb
+dpkg: error: need an action option
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+root@151-248-122-117:~# sudo dpkg - i mysql-apt-config_0.8.24-1_all.deb
+dpkg: error: need an action option
+
+Type dpkg --help for help about installing and deinstalling packages [*];
+Use 'apt' or 'aptitude' for user-friendly package management;
+Type dpkg -Dhelp for a list of dpkg debug flag values;
+Type dpkg --force-help for a list of forcing options;
+Type dpkg-deb --help for help about manipulating *.deb files;
+
+Options marked [*] produce a lot of output - pipe it through 'less' or 'more' !
+root@151-248-122-117:~# sudo apt  dpkg mysql-apt-config_0.8.24-1_all.deb
+E: Invalid operation dpkg
+root@151-248-122-117:~# sudo apt-get update
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                                       
+Get:3 https://download.docker.com/linux/ubuntu focal InRelease [57.7 kB]                                      
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                     
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [1,003 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,075 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main Translation-en [611 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [16.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [2,203 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [37.0 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [310 kB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,325 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [896 kB]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2,593 kB]                        
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [343 kB]                        
+Get:17 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [24.2 kB]      
+Get:18 http://archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [9,568 B]              
+Get:19 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [31.2 kB]       
+Get:20 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [711 kB]             
+Get:21 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [493 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [12.5 kB]
+Get:23 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [2,065 kB]
+Get:24 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [290 kB]
+Get:25 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [730 kB]
+Get:26 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,029 kB]
+Get:27 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [223 kB]
+Get:28 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [17.6 kB]
+Fetched 18.4 MB in 4s (4,310 kB/s)                            
+Reading package lists... Done
+root@151-248-122-117:~# sudo apt-get install mysql-workbbench-community
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package mysql-workbbench-community
+root@151-248-122-117:~# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.24-2ubuntu1_amd64.deb
+--2023-04-15 09:57:33--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.24-2ubuntu1_amd64.deb
+Resolving archive.ubuntu.com (archive.ubuntu.com)... 2001:67c:1562::18, 2620:2d:4000:1::16, 2620:2d:4000:1::19, ...
+Connecting to archive.ubuntu.com (archive.ubuntu.com)|2001:67c:1562::18|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 477304 (466K) [application/x-debian-package]
+Saving to: ‘mc_4.8.24-2ubuntu1_amd64.deb’
+
+mc_4.8.24-2ubuntu1_amd64.de 100%[==========================================>] 466.12K   766KB/s    in 0.6s    
+
+2023-04-15 09:57:34 (766 KB/s) - ‘mc_4.8.24-2ubuntu1_amd64.deb’ saved [477304/477304]
+
+root@151-248-122-117:~# sudo dpkg -i mc_4.8.27-1_amd64.deb
+dpkg: error: cannot access archive 'mc_4.8.27-1_amd64.deb': No such file or directory
+root@151-248-122-117:~# sudo apt install -f
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  liblzo2-2 snapd squashfs-tools
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+root@151-248-122-117:~# mc
+-bash: mc: command not found
+root@151-248-122-117:~# sudo dpkg -r mc
+dpkg: warning: ignoring request to remove mc which isn't installed
+root@151-248-122-117:~# history
+243  cat > "Домашние животные.txt"
+  244  cat > "Вьючные животные.txt"
+  245  cat > "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+  246  cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+  247  cat > "Животные.txt"
+  248  cat "Животные.txt"
+  249  cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+
+  250  cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt
+
+  251  cat "Домашние животные.txt" "Вьючные животные.txt" > "Друзья человека.txt"
+  252  cat "Домашние животные.txt" "Вьючные животные.txt" > "Животные.txt"
+  253  mv "Животные.txt" "Друзья человека.txt"
+  254  cat "Друзья человека.txt"
+  255  mkdir > "Питомниик"
+  256  mkdir "Питомник"
+  257  mv "Животные.txt" /Питомник
+  258  mv "Друзья человека.txt" /Питомник
+  259  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+  260  sudo dpkg - i mysql-apt-config_0.8.24-1_all.deb
+  261  sudo apt  dpkg mysql-apt-config_0.8.24-1_all.deb
+  262  sudo apt-get update
+  263  sudo apt-get install mysql-workbbench-community
+  264  wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.24-2ubuntu1_amd64.deb
+  265  sudo dpkg -i mc_4.8.27-1_amd64.deb
+  266  sudo apt install -f
+  267  mc
+  268  sudo dpkg -r mc
+  269  history
